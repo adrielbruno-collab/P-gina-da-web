@@ -3,29 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        header{
-            background-color: rgb(45, 45, 112);
-            background-color: antiquewhite;
-            text-align: center;
-        }
-        main{
-            background-color: bisque;
-            background-color: rgb(52, 64, 165); 
+    <title>Meu Blog | Adriel furquim bruno</title>
+    <!-- Fonte moderna via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <style>
+        :root {
+            --primary-color: #3aed61;
+            --primary-hover: #37d928;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #002fff, var(--primary-color));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.25);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        article {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        article h2 {
+            font-size: 1.75rem;
+            color: var(--text-color);
+            margin-bottom: 12px;
+        }
+
+        .author-tag {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            width: 100%;
+        }
+
+        .author-tag strong {
+            color: var(--primary-color);
+        }
+
+        article p {
+            font-size: 1.05rem;
+            color: #334155;
+            margin-bottom: 12px;
+        }
+
+        article ul, article ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: #334155;
+        }
+
+        article li {
+            margin-bottom: 8px;
+        }
+
+        article code {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Meu blog tech</h1>
+        <h1>💻 Matheus Santos Cardoso</h1>
         <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-        <header>
-            <main>
-                <h2>Meu primeiro post</h2>
-        <p>Por: Marcelo Paludetto</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+    </header>
+
+    <main>
+        <!-- Artigo: Postagem Inicial -->
+        <article>
+            <h2>Meu primeiro post</h2>
+            <div class="author-tag">
+                <span>Por: <strong>Adriel furquim bruno</strong></span>
+            </div>
+            <p>Boas-vindas ao meu primeiro blog!</p>
+        </article>
+
+        <!-- Artigo: Apresentação do Projeto (README Integrado) -->
+        <article>
+            <h2>Sobre o Projeto</h2>
+            <div class="author-tag">
+                <span>Projeto por: <strong>Adriel furquim bruno</strong></span>
+            </div>
+            
+            <p>Bem-vindo ao repositório do <strong>Meu Primeiro Blog</strong>! Este é um projeto inicial criado para praticar o desenvolvimento web e compartilhar conhecimentos sobre tecnologia e programação.</p>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px;">📜 Descrição</h3>
+            <p>Este projeto é uma página web estática construída com estruturação em HTML5 e estilização CSS3 moderna e responsiva. O objetivo principal é servir como um diário de aprendizado e um espaço para publicar artigos sobre o mundo da tecnologia.</p>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px;">🛠️ Tecnologias Utilizadas</h3>
+            <ul>
+                <li><strong>HTML5:</strong> Para a estruturação e semântica da página (cabeçalho, artigos, títulos, etc).</li>
+                <li><strong>CSS3:</strong> Para a estilização visual moderna, utilizando variáveis CSS, gradientes e layout responsivo.</li>
+            </ul>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px;">🚀 Como Executar o Projeto</h3>
+            <ol>
+                <li>Faça o download ou clone este repositório para o seu computador.</li>
+                <li>Navegue até a pasta onde o arquivo se encontra.</li>
+                <li>Clique duas vezes no arquivo <code>index.html</code>.</li>
+                <li>O seu navegador padrão vai abrir e exibir o blog na tela!</li>
+            </ol>
+
+            <p style="margin-top: 20px; font-style: italic; color: var(--primary-color);">
+                🚀 Projeto criado com dedicação para aprender programação web!
+            </p>
+        </article>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Adriel furquim bruno. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
