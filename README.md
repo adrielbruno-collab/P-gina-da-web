@@ -1,4 +1,4 @@
-💻 Adriel furquim bruno
+💻 Adriel fuurquim bruno
 
 Bem-vindo ao repositório do **Meu Primeiro Blog**! Este é um projeto inicial criado para praticar o desenvolvimento web e compartilhar conhecimentos sobre tecnologia e programação.
 
